@@ -46,7 +46,7 @@ function draw() {
     }
     else
         y=y+0.5;
-    if(y<=0)
+    if(y>=height||y<=0)
         y=y-0.5;
         if(point>0)
             point--;
