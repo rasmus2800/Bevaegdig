@@ -38,14 +38,11 @@ function draw() {
     background(r, g, b);
     strokeWeight(10);
     ellipse(width / 2, y, 50);
-    if (accelerationX > 70){
+    if (accelerationX > 10){
         r = random(0, 256);
         g = random(0, 256);
         b = random(0, 256);
         y--;
-    else{
-         y++;  
-    }  
     }
     if (y<height/2+25,y>height/2-25){
         flyttet++;
@@ -56,3 +53,4 @@ function draw() {
 text('highscore:' + str(rystet), 25, height-50);
 text('point:' + str(flyttet),25, height-100);
 }
+//sakjda
