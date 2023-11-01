@@ -38,14 +38,14 @@ function draw() {
     background(r, g, b);
     strokeWeight(10);
     ellipse(width / 2, y, 50);
-    y++;
-    if (accelerationX > 70) {
+    if (accelerationX > 70){
         r = random(0, 256);
         g = random(0, 256);
         b = random(0, 256);
         y--;
-        if(rystet%2 == 0)
-        rystet++;
+    else{
+         y++;  
+    }  
     }
     if (y<height/2+25,y>height/2-25){
         flyttet++;
