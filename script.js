@@ -10,8 +10,8 @@
 // 10 spring til siden hurtigt nok - gør baggrunden helt hvid...
 
 let y = 10; let r = 300; g = 180; b = 0;
-let rystet = 0;
-let flyttet = 0;
+let highscore = 0;
+let point = 0;
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
@@ -50,7 +50,6 @@ function draw() {
     if(flyttet>rystet){
         rystet=flyttet;
     }
-text('highscore:' + str(rystet), 25, height-50);
-text('point:' + str(flyttet),25, height-100);
+text('highscore:' + str(highscore), 25, height-50);
+text('point:' + str(point),25, height-100);
 }
-//sakjda
