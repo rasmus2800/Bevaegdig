@@ -45,7 +45,7 @@ function draw() {
         y--;
     }
     else
-        y++;
+        y=y+0.5;
     if (y<height/2+25&&y>height/2-25){
         point++;
     }
