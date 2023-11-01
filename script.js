@@ -44,11 +44,13 @@ function draw() {
         b = random(0, 256);
         y--;
     }
-    if (y<height/2+25,y>height/2-25){
-        flyttet++;
+    else
+        y++;
+    if (y<height/2+25&&y>height/2-25){
+        point++;
     }
-    if(flyttet>rystet){
-        rystet=flyttet;
+    if(point>highscore){
+        highscore=point;
     }
 text('highscore:' + str(highscore), 25, height-50);
 text('point:' + str(point),25, height-100);
