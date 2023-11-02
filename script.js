@@ -38,7 +38,7 @@ function setup() {
 setInterval(myTimer, 10000);
 
 function myTimer() {
-speed=Math.random();
+speed=0.1*(Math.floor(Math.random() * 9) + 3);
 print(speed);
 }
 
