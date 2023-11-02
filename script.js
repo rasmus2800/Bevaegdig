@@ -12,6 +12,7 @@
 let y = 10; let r = 300; g = 180; b = 0;
 let highscore = 0;
 let point = 0;
+let speed = 1;
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
@@ -34,10 +35,18 @@ function setup() {
     parentDiv.insertBefore(canvas.elt, p);
 }
 
+setInterval(myTimer, 10000);
+
+function myTimer() {
+speed=Math.random();
+print(speed);
+}
+
 function draw() {
     background(r, g, b);
     strokeWeight(10);
     ellipse(width / 2, y, 50);
+
     if (accelerationX > 10){
         r = random(0, 256);
         g = random(0, 256);
@@ -45,11 +54,12 @@ function draw() {
         y--;
     }
     else
-        y=y+0.5;
-    if(y>=height||y<=0)
-        y=y-0.5;
+        y=y+speed;
+    if(y>=height||y<=0){
+        y=y-speed;
         if(point>0)
             point--;
+    }
     if (y<height/2+25&&y>height/2-25){
         point++;
     }
