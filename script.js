@@ -9,7 +9,7 @@
 // tilføj knapper, og tilføj eventlistener til knappen, funktionskald
 // 10 spring til siden hurtigt nok - gør baggrunden helt hvid...
 
-let y = 10; let r = 300; g = 180; b = 0;
+let y = 10; let r = 250; g = 200; b = 0;
 let highscore = 0;
 let point = 0;
 let speed = 1;
@@ -21,7 +21,7 @@ function setup() {
     // og sørger derefter for at kanten tælles med i width
     canvas.elt.style.border = '5px solid black';
     canvas.elt.style.boxSizing = 'border-box';
-    canvas.elt.style.borderRadius = '20px';
+    canvas.elt.style.borderRadius = '10px';
 
     canvas.parent('#beholder');
     // gør canvas-elementet responsivt til skærmbredden
@@ -44,7 +44,8 @@ print(speed);
 
 function draw() {
     background(r, g, b);
-    strokeWeight(10);
+    strokeWeight(5);
+    fill(150,0,150);
     ellipse(width / 2, y, 50);
 
     if (accelerationX > 10){
@@ -66,6 +67,9 @@ function draw() {
     if(point>highscore){
         highscore=point;
     }
+fill(0);
+if(speed>0.69)
+    text('LØB!', 50, height-300);
 text('highscore:' + str(highscore), 25, height-50);
 text('point:' + str(point),25, height-100);
 }
