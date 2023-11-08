@@ -45,7 +45,7 @@ print(speed);
 function draw() {
     background(r, g, b);
     strokeWeight(5);
-    fill(150,0,150);
+    fill(230,0,230);
     ellipse(width / 2, y, 50);
 
     if (accelerationX > 10){
