@@ -57,7 +57,7 @@ function draw() {
         r = random(0, 256);
         g = random(0, 256);
         b = random(0, 256);
-        y--;
+        y = y - 1.5;
     }
     else
         y=y+speed;
