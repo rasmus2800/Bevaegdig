@@ -16,7 +16,6 @@
             padding: 0;
             background-color: lightgray;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            /* vmin skalerer responsivt til viewporten */
             letter-spacing: 1vmin;
         }
 
@@ -27,26 +26,18 @@
             background-color: rgb(104, 122, 212);
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            /* 3 kolonner, fr står for fraction, */
-            /* grid-gap: 5%; */
-            /* %-enhed gør det også responsivt */
         }
         .beholder-item {
-            /* Grid item styles */
         }
         @media (max-width: 768px) {
             .beholder {
                 grid-template-columns: 1fr 1fr;
-                /* 2 kolonner på små skærme */
             }
         }
         @media (max-width: 480px) {
             .beholder {
                 grid-template-columns: 1fr;
-                /* 1 kolonne på ekstra små skærme */
-                /* her bruges navnene - 6 gange per kolonne skal følges
-            hele vejen ned, se andet eksempel med 3 i kolonnen  
-            menu-item løber over to rækker i samme kolonne*/
+
             grid-template-areas:
                 'header'
                 'menu'
@@ -67,7 +58,7 @@
         <h3>Pas på farten, den ændre sig</h3>
 
     </div>
-    <!-- <her kan man referere sin js-fil, fx -->
+
     <script src='script.js'></script>
 </body>
 
