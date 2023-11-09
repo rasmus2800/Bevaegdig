@@ -47,7 +47,7 @@ function draw() {
     else
         y = y + speed;
 
-    if(y >= height || y <= 0){
+    if(y >= height){
         y = y - speed;
         if(point>0)
             point--;
